@@ -6,11 +6,6 @@ The portfolio highlights real-world projects, clean UI design, and responsive la
 
 ---
 
-## 🚀 Live Demo
-🔗 https://yourusername.github.io/
-
----
-
 ## 🛠️ Technologies Used
 - HTML5
 - CSS3
