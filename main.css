@@ -18,8 +18,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    /* Safari support */
+    -webkit-backdrop-filter: blur(30px); /* Safari support */
     padding: 50px;
     transform: scale(0);
     animation: zoom-in 1s ease forwards;
@@ -56,8 +55,7 @@ header {
 }
 
 .nav a {
-    position: relative;
-    /* REQUIRED */
+    position: relative; /* REQUIRED */
     text-decoration: none;
     color: #ffffff;
     padding-bottom: 5px;
@@ -95,6 +93,7 @@ header {
     gap: 50px;
     align-items: center;
     margin: 0 auto;
+    max-height: 100vh;
 }
 
 .content1 p {
@@ -128,7 +127,7 @@ header {
 /* Button / Link */
 .content1 a {
     display: inline-block;
-    margin: 40px 15px;
+    margin: 40px 15px 0;
     padding: 12px 30px;
     background: #fff;
     color: #333;
@@ -156,7 +155,7 @@ header {
     box-shadow: 0 0 50px #fff;
 }
 
-/* Service section */
+/* Service Section */
 .service-section {
     display: none;
 }
@@ -182,7 +181,7 @@ header {
         box-shadow 0.3s ease;
 }
 
-/* POP-UP EFFECT ON HOVER */
+/* Pop-up Effect on Hover */
 .service-box:hover {
     transform: translateY(-15px) scale(1.05);
     box-shadow:
@@ -251,6 +250,7 @@ header {
     box-shadow: 0 0 10px #fff;
     font-weight: 500;
     font-size: 15px;
+    max-width: 150px;
 }
 
 .content_about button:hover {
@@ -276,7 +276,7 @@ header {
 .project-box {
     background: #ffffffba;
     height: 280px;
-    width: 310px;
+    width: 350px;
     padding: 25px;
     margin-top: 25px;
     border-radius: 30px;
@@ -302,7 +302,7 @@ header {
 
 .project-box button {
     display: inline-block;
-    margin: 5px;
+    margin: 8px;
     padding: 12px 30px;
     background: #812cbdee;
     color: #ffffff;
@@ -312,6 +312,7 @@ header {
     transition: all 0.3s ease;
     box-shadow: 0 0 10px #812cbd;
     font-weight: 500;
+    max-width: 150px;
 }
 
 .project-box button:hover {
@@ -337,18 +338,28 @@ header {
 .btn-wrapper {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 15px;
 }
 
 .close {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: 900;
+    background: #fff;
+    color: #000;
+    box-shadow:0 20px 50px rgba(245, 242, 242, 0.975) ;
 }
 
-/* SLIDER */
+.close:hover{
+    background: transparent;
+    color: #fff;
+}
+
+/* Slider */
 .slider {
     width: 440px;
     height: 250px;
@@ -416,9 +427,6 @@ header {
     color: #fff;
 }
 
-
-
-
 /* Contact Section */
 .contact-section {
     display: none;
@@ -456,9 +464,10 @@ header {
 
 .social-links a {
     color: #ffffff;
-    font-size: 22px;
-    margin: 0 10px;
+    font-size: 26px;
+    margin: 0 7px;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .social-links a:hover {
@@ -473,7 +482,7 @@ form {
 label {
     display: block;
     margin-bottom: 5px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 input,
@@ -510,4 +519,295 @@ button:hover {
     margin-top: 15px;
     font-size: 14px;
     text-align: center;
+}
+
+
+/* =========================================================
+   SMALL PHONES – iPhone SE (≤ 375px)
+   ========================================================= */
+@media (max-width: 375px) {
+
+    body {
+        padding: 30px 5%;
+    }
+
+    header {
+        padding-bottom: 30px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .content_home {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        max-height: none;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .position {
+        font-size: 18px;
+    }
+
+    .few {
+        font-size: 14px;
+    }
+
+    .content_home img {
+        max-width: 160px;
+    }
+
+    .social-links {
+        margin-top: 15px;
+    }
+
+    .box {
+        grid-template-columns: 1fr;
+    }
+
+    .service-box {
+        height: auto;
+    }
+
+    .project {
+        justify-content: center;
+    }
+
+    .project-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-modal {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .slider {
+        width: 100%;
+        height: 160px;
+    }
+
+    .contact {
+        padding: 20px 0;
+    }
+
+    .contact-content {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE PHONES (≤ 600px)
+   ========================================================= */
+@media (max-width: 600px) {
+
+    body {
+        padding: 50px 6%;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .content_home {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .content1 a {
+        margin: 30px auto 0;
+    }
+
+    .social-links a {
+        font-size: 24px;
+    }
+
+    .box {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        justify-content: center;
+    }
+
+    .project-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-modal {
+        width: 90%;
+    }
+
+    .slider {
+        width: 100%;
+        height: 200px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   TABLETS (601px – 1024px)
+   ========================================================= */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    body {
+        padding: 70px 8%;
+    }
+
+    .nav ul {
+        gap: 30px;
+    }
+
+    .content_home {
+        gap: 40px;
+    }
+
+    .box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-box {
+        height: auto;
+    }
+
+    .project {
+        justify-content: center;
+    }
+
+    .project-box {
+        width: 300px;
+        height: auto;
+    }
+
+    .project-modal {
+        width: 80%;
+    }
+
+    .slider {
+        width: 100%;
+        height: 220px;
+    }
+
+    .contact-content {
+        max-width: 600px;
+    }
+}
+
+
+/* =========================================================
+   LARGE TABLETS / SMALL LAPTOPS (1025px – 1280px)
+   ========================================================= */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    body {
+        padding: 90px 9%;
+    }
+
+    .box {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project {
+        justify-content: space-between;
+    }
+}
+
+/* =========================================================
+   HEADER / NAVBAR RESPONSIVE FIX
+   ========================================================= */
+
+/* Small phones – iPhone SE */
+@media (max-width: 375px) {
+
+    header {
+        padding-bottom: 25px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav ul a li {
+        font-size: 14px;
+    }
+}
+
+
+/* Mobile phones */
+@media (max-width: 600px) {
+
+    header {
+        padding-bottom: 30px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav h3 {
+        font-size: 22px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .nav ul a li {
+        font-size: 15px;
+    }
+}
+
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .nav {
+        gap: 20px;
+    }
+
+    .nav h3 {
+        font-size: 24px;
+    }
+
+    .nav ul {
+        gap: 30px;
+    }
 }
