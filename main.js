@@ -17,7 +17,7 @@ $(document).ready(function () {
             $("#project-section").fadeIn(300);
         });
 
-        $("#contact").fadeOut(300, function () {
+        $("#contact-section").fadeOut(300, function () {
             $("#project-section").fadeIn(300);
         });
     });
@@ -39,7 +39,7 @@ $(document).ready(function () {
             $("#content_home").fadeIn(300);
         });
 
-        $("#contact").fadeOut(300, function () {
+        $("#contact-section").fadeOut(300, function () {
             $("#content_home").fadeIn(300);
         });
     });
@@ -61,7 +61,7 @@ $(document).ready(function () {
             $("#content_about").fadeIn(300);
         });
 
-        $("#contact").fadeOut(300, function () {
+        $("#contact-section").fadeOut(300, function () {
             $("#content_about").fadeIn(300);
         });
     });
@@ -83,7 +83,7 @@ $(document).ready(function () {
             $("#services").fadeIn(300);
         });
 
-        $("#contact").fadeOut(300, function () {
+        $("#contact-section").fadeOut(300, function () {
             $("#services").fadeIn(300);
         });
     });
@@ -164,6 +164,7 @@ $(document).ready(function () {
             $("#container").removeClass("blur-bg");
         });
 
+
         $("#project-button2").on("click", function () {
             $("#container").addClass("blur-bg");
 
@@ -217,6 +218,7 @@ setInterval(() => {
     slides[index].classList.add("active");
 }, 1500);
 
+
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -231,7 +233,6 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
         return;
     }
 
-    
     alert("Message sent successfully!");
 
     // Clear form
